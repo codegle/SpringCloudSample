@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: zuul-gateway
+  profiles:
+    active: profile1
+
+eureka:
+  instance:
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+
+service-consumer:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule

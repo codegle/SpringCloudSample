@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: service-consumer
+  profiles:
+    active: profile1
+
+eureka:
+  instance:
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+
+feign:
+  hystrix:
+    enabled: true

@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: service-provider
+  profiles:
+    active: profile1
+
+eureka:
+  instance:
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}

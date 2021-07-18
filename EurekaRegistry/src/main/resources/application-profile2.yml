@@ -1,0 +1,8 @@
+server:
+  port: 9002
+eureka:
+  instance:
+    hostname: server2 # In hosts file, sets: 127.0.0.1 server2
+  client:
+    service-url:
+      defaultZone:  http://server1:9001/eureka

@@ -1,0 +1,8 @@
+server:
+  port: 6001
+eureka:
+  instance:
+    hostname: server1
+  client:
+    service-url:
+      defaultZone: http://server1:9001/eureka
